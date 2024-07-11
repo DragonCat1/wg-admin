@@ -1,0 +1,108 @@
+.ui {
+  &-card {
+    background-color: var(--c-front-bg);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 1px var(--c-shadow);
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  &-input {
+    border-radius: 4px;
+    border: 1px solid var(--c-border);
+    padding: 0 0.5rem;
+    &:focus-within {
+      border-color: var(--c-border-f);
+    }
+    input {
+      background: transparent;
+      padding: 0;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 0.8rem;
+      &::placeholder {
+        color: var(--c-text-l);
+      }
+    }
+    &-disabled {
+      // cursor: not-allowed;
+      background: var(--c-text-bg);
+      input {
+        // cursor: not-allowed;
+      }
+    }
+    &-primary {
+      border-width: 2px;
+      border-radius: 6px;
+      input {
+        font-size: 1rem;
+      }
+    }
+    &-view-mode {
+      input::placeholder {
+        visibility: hidden;
+      }
+      &:focus-within {
+        input::placeholder {
+          visibility: visible;
+        }
+      }
+      border-color: transparent;
+      background: transparent;
+      &:hover:not(:focus-within) {
+        background: var(--c-text-bg);
+        border-color: var(--c-text-bg);
+      }
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    &-b {
+      display: block;
+    }
+    button {
+      width: 100%;
+      border-radius: 4px;
+      background: #fff;
+      color: var(--c-text);
+      border: 1px solid transparent;
+      border-color: var(--c-btn-border);
+      box-shadow: 0 2px 1px var(--c-btn-shadow);
+      line-height: 2rem;
+      padding: 0 15px;
+      font-weight: 600;
+      &:hover {
+        color: var(--c-main);
+        border-color: var(--c-main);
+      }
+      &:active {
+        color: var(--c-main);
+        border-color: var(--c-main);
+        box-shadow: 0 1px 2px var(--c-btn-shadow) inset;
+      }
+    }
+    &:not(.disabled) {
+      button {
+        cursor: pointer;
+      }
+    }
+    &-s {
+      button {
+        line-height: 1rem;
+        padding: 0 10px;
+      }
+    }
+    &-l {
+      button {
+        line-height: 2.4rem;
+        font-size: 1rem;
+        padding: 0 20px;
+      }
+    }
+  }
+}

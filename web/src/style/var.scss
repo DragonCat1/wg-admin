@@ -1,0 +1,28 @@
+@mixin light() {
+  --c-main-bg: #fdfdfd;
+  --c-front-bg: #fff;
+  --c-text-bg: #ecf0f1;
+  --c-main: #ae373a;
+  --c-text: #2c3e50;
+  --c-text-l: #adbed0;
+  --c-shadow: rgba(0, 0, 0, 0.1);
+  --c-border: rgba(129, 129, 129, 0.1);
+  --c-border-f: rgba(174, 55, 59, 0.6);
+  --c-btn-border: #adbed0;
+  --c-btn-shadow: rgba(0, 0, 0, 0.1);
+}
+
+@mixin dark() {
+  --c-main-bg: #111;
+  --c-front-bg: #2c3e50;
+  --c-text-bg: #ecf0f1;
+  --c-main: #ae373a;
+  --c-text: #ecf0f1;
+  --c-shadow: rgba(0, 0, 0, 0.1);
+}
+
+@mixin flex-c() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

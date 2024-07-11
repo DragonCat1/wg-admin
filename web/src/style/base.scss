@@ -1,0 +1,47 @@
+@import './reset.scss';
+@import './var.scss';
+@import './font.scss';
+@import './ui.scss';
+
+:root {
+  @include light;
+  @media (prefers-color-scheme: light) {
+    @include light;
+  }
+  @media (prefers-color-scheme: dark) {
+    // @include dark;
+  }
+  color: var(--c-text);
+  font-family: 'Quicksand', sans-serif;
+}
+
+* {
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+input,
+button {
+  font-family: inherit;
+}
+
+button,
+select {
+  user-select: none;
+}
+
+html {
+  &.light {
+    @include light;
+  }
+  &.dark {
+    @include dark;
+  }
+  background: var(--c-main-bg);
+}
+
+div {
+  box-sizing: border-box;
+}
